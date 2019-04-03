@@ -55,11 +55,7 @@ if (isset($_GET['action'])) {
         $title = htmlspecialchars($_POST['title']);
         $content = nl2br(htmlspecialchars($_POST['content'])) ;
         $typeId = (int) $_POST['type'];
-        if (isset($_POST['imgsrc'])) {
-            $imgsrc = htmlspecialchars($_POST['imgsrc']);
-        } else {
-            $imgsrc = NULL;
-        }
+        $imgsrc = htmlspecialchars($_POST['imgsrc']);
         $postController->addPost($title,$content, $typeId, $imgsrc);
     }
     elseif ($_GET['action'] == 'addPostView') {

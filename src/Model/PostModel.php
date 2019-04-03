@@ -37,6 +37,15 @@ class PostModel
             'imgsrc' => $post->getImgsrc()
         ));
     }
+//    public function addPostNoPicture(Post $post) {
+//        $req = $this->_db->prepare('INSERT INTO post(title, content, type, imgsrc) VALUES(:title, :content, :type, imgsrc=:imgsrc)');
+//        $req->execute(array(
+//            'title' => $post->getTitle(),
+//            'content' => $post->getContent(),
+//            'type' => $post->getType(),
+//            'imgsrc' => NULL
+//        ));
+//    }
     function deletePost($id) {
         $req = $this->_db->prepare('DELETE FROM post WHERE id=:id');
         $req->execute(array(
