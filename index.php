@@ -1,5 +1,4 @@
 <?php
-include_once('Post.php');
 include_once('src/Controller/CommentController.php');
 include_once('src/Controller/PostController.php');
 include_once('src/Controller/UserController.php');
