@@ -10,7 +10,7 @@
     </div>
     <div class="d-flex justify-content-center flex-column">
         <h6 class="text-center post-title mt-1"><b><a href="index.php?action=viewPost&id="> <?php echo $rep['title']; ?> </a></b></h6>
-        <p class="text-center post-inf mb-2">Posté paaaaar Admin le <?= $rep['createdAt']; ?> - <span class="badge badge-primary"><i class="far fa-comment"> 0 </i></span></p>
+        <p class="text-center post-inf mb-2">Posté par Admin le <?= $rep['createdAt']; ?> - <span class="badge badge-primary"><i class="far fa-comment"> 0 </i></span></p>
     </div>
     <div class="row bg-light">
     </div>
