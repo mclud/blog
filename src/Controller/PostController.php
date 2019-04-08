@@ -54,31 +54,22 @@ class PostController extends Manager {
     {
         $categories = $this->getTypePostRepository()->getTypes();
         $types = $this->getTypePostRepository()->getTypes();
-        require('views/addPostView.php');
+        require('views/post/addPostView.php');
     }
     public function addPost($title, $content, $typeId, $imgsrc)
     {
         $post = new Post();
-//        if (!empty($imgsrc)) {
-            var_dump($imgsrc);
-            $post->hydrate(array(
-                'title' => $title,
-                'content' => $content,
-                'archive' => 0,
-                'type' => $typeId,
-                'imgsrc' => $imgsrc
-            ));
-//            var_dump($post);
-////        } else {
-//            var_dump('here no img');
-//            $post->hydrate(array(
-//                'title' => $title,
-//                'content' => $content,
-//                'archive' => 0,
-//                'type' => $typeId,
-//            ));
-            var_dump($post);
-//        }
+        $post->hydrate(array(
+            'title' => $title,
+            'content' => $content,
+            'archive' => 0,
+            'type' => $typeId,
+        ));
+        if (!empty($imgsrc)) {
+            var_dump('PICTURE ON');
+            $post->setImgsrc($imgsrc);
+        }
+        var_dump($post);
         $this->getPostRepository()->addPost($post);
         $this->listPostsView();
     }

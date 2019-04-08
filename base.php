@@ -13,6 +13,7 @@
     <title><?= $title ?></title>
 </head>
 <body>
+
 <div class="container-fluid bg-light d-flex justify-content-end">
     <ul class="list-unstyled m-0 p-0">
         <li class="list-inline-item menu-top-link">

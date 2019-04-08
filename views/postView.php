@@ -49,6 +49,8 @@
                     <p><?= $com['content']; ?></p>
                 </div>
             </div>
+            <?php } ?>
+
         </div>
         <div class="col-12 d-flex flex-column">
             <form action="index.php?action=addCom&id=<?= $rep['id']; ?>" method="post" class="align-items-center">
@@ -69,9 +71,6 @@
                 <div class="d-flex justify-content-center mb-2">
                     <input type="submit" value="Envoyer" class="btn btn-sm btn-primary">
                 </div>
-                <?php
-                }
-                ?>
             </form>
         </div>
     </div>
